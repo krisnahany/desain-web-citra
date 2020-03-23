@@ -1,0 +1,275 @@
+#products
+	.banner
+		background-color: $background-pink
+		height: auto
+		.main
+			display: block
+			width: 100%
+		.mobile
+			display: none
+			width: 100%
+		// img
+		// 	width: 100%
+	.filter
+		background-color: $background-pink
+		.wrap
+			height: auto
+			position: relative
+			margin: 0 auto
+			width: 90%
+			.filter-opt
+				float: left
+				padding-left: 3rem
+				// padding-right: 5rem
+				.title
+					// padding-right: 15px
+					padding: 1rem 15px 1rem 0
+					font-size: 1.25rem
+					color: #fff
+					float: left
+					// padding: 1rem 0
+				.opts
+					float: right
+					position: relative
+					/*the container must be positioned relative:*/
+					.custom-select
+						position: relative
+						width: 210px
+						margin: 14px 10px
+						display: inline-block
+					// .custom-select select
+					// 	display: none //hide original SELECT element:
+					// .select-selected
+					// 	background-color: pink
+					// /*style the arrow inside the select element:*/
+					// .select-selected:after
+					// 	position: absolute
+					// 	content: ""
+					// 	top: 12px
+					// 	right: 15px
+					// 	width: 0
+					// 	height: 0
+					// 	border: 6px solid transparent
+					// 	border-color: #fff transparent transparent transparent
+					// /*point the arrow upwards when the select box is open (active):*/
+					// .select-selected.select-arrow-active:after
+					// 	border-color: transparent transparent #fff transparent
+					// 	top: 7px
+					// /*style the items (options), including the selected item:*/
+					// .select-items div,.select-selected
+					// 	// color: #292b2c
+					// 	color: #636c72
+					// 	padding: 6px 16px
+					// 	border: 1px solid transparent
+					// 	border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent
+					// 	cursor: pointer
+					// 	user-select: none
+					// 	font-size: .875rem
+					// /*style items (options):*/
+					// .select-items
+					// 	position: absolute
+					// 	background-color: #fff
+					// 	top: 100%
+					// 	left: 0
+					// 	right: 0
+					// 	z-index: 99
+					// /*hide the items when the select box is closed:*/
+					// .select-hide
+					// 	display: none
+					// .select-items div:hover, .same-as-selected
+					// 	// background-color: rgba(0, 0, 0, 0.1)
+					// 	background-color: pink
+					// .select-items.cursor-not-allowed
+					// 	cursor: not-allowed
+			.filter-search
+				float: right
+				padding: 15px
+				#product-search
+					background:
+						image: $background-image-search-product
+						repeat: no-repeat
+						color: #fff
+						position: 10px 50%
+						size: auto 60%
+					border: 1px solid rgba(0, 0, 0, 0.15)
+					color: #464a4c
+					padding: .25rem 5rem .25rem 2rem
+	@media screen and (max-width: $large-tablet)
+		.filter
+			.wrap
+				width: 98%
+				.filter-opt
+					.opts
+						.custom-select
+							width: 160px
+				.filter-search
+					padding-right: 3rem
+					#product-search
+						padding: .25rem .2rem .25rem 2rem
+	@media screen and (max-width: $tablet)
+		.filter
+			.wrap
+				.filter-opt
+					padding-left: 0
+					.title
+						display: none
+				.filter-search
+					padding-right: 0
+					padding-left: 30px
+					width: 27%
+					#product-search
+						width: 90%
+						background:
+							size: auto 70%
+							position: 5px 50%
+
+	@media screen and (max-width: $mobile)
+		.banner
+			.main
+				display: none
+			.mobile
+				display: block
+		.filter
+			.wrap
+				display: block
+				float: none
+				width: 100%
+				.filter-opt
+					// float: none
+					position: relative
+					width: 100%
+					padding: 15px
+					.opts
+						float: none
+						.custom-select
+							width: 100%
+							display: block
+							margin: 0
+				.filter-search
+					// float: none
+					// width: 100%
+					display: none
+
+	.products
+		height: auto
+		padding: 35px 50px 0
+		width: 100%
+		box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4)
+		h2
+			text-align: center
+			color: $text-pink
+			letter-spacing: 0.025em
+			// margin-bottom: 20px
+			font:
+				weight: 700
+				size: 2.5rem
+		.wrap
+			padding: 0 20px 20px
+			.group
+				margin-top: 3rem
+				h2
+					text-align: left
+					font:
+						size: 1.875rem
+						weight: normal
+					border-bottom: 1px solid #f595b2
+					padding-bottom: 1.25rem
+					margin-bottom: 2rem
+				.product-swiper
+					position: relative
+					margin: 0 auto
+					width: 80%
+					.product
+						float: left
+						padding: 20px 10px
+						width: 33.32%
+						height: auto
+						.produk-nama
+							width: 100%
+							p
+								text-align: center
+								color: $text-pink
+								font-size: 1.6rem
+								// padding: 0 20px
+								height: 65px
+								width: 80%
+								margin: 0 auto
+						.produk-nama::after
+							content: ''
+							display: block
+							max-width: 200px
+							width: 70%
+							height: 8px
+							background-color: #fee5ed
+							margin: auto
+						.produk-gambar
+							padding: 30px 0
+							// height: 300px
+							img
+								display: block
+								height: 200px
+								// height: auto
+								margin: auto
+								max-width: 100%
+								width: auto
+								max-height: 100%
+								-o-object-fit: contain
+								object-fit: contain
+								-o-object-position: 50% 50%
+								object-position: 50% 50%
+						.button
+							border: 2px solid $background-pink
+								radius: 2rem
+							background-color: $background-pink
+							color: $text-white
+							padding: 8px 15px
+							margin: 10px auto
+							display: block
+							box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075)
+
+	@media screen and (max-width: $large-tablet)
+		.products
+			.wrap
+				.group
+					.product-swiper
+						.product
+							.produk-nama
+								p
+									font-size: 1.4rem
+
+	@media screen and (max-width: $tablet)
+		.products
+			padding: 35px 0 0
+			h2
+				font-size: 1.25rem
+			.wrap
+				padding: 0 0 20px
+				.group
+					h2
+						text-align: center
+					.product-swiper
+						.no-swiper
+							width: 50%
+
+	@media screen and (max-width: $mobile)
+		.products
+			.wrap
+				.group
+					h2
+						font-weight: 300
+						text-align: center
+						background-color: #ffd8e4
+						font-size: 1.1rem
+						margin-bottom: 1.5rem
+						position: relative
+						margin-left: auto
+						margin-right: auto
+						padding-right: 15px
+						padding-left: 15px
+						padding-top: .5rem
+						padding-bottom: .5rem
+						border-bottom: 0
+					.product-swiper
+						.no-swiper
+							margin: 0 auto
+							width: 100%

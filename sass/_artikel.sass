@@ -1,0 +1,40 @@
+#article
+	.banner
+		background-color: $background-banner
+		height: auto
+		img
+			width: 100%
+	.filter
+		background-color: $background-filter
+		.wrap
+			padding: 1rem 0
+			margin: 0 auto
+			position: relative
+			// display: block
+			// background-color: $color-pink
+			// border: 1px solid
+			width: 50%
+			.btn-article
+				float: left
+				cursor: pointer
+				position: relative
+				background-color: $color-pink
+				border-color: $color-pink
+				color: $color-grey
+				margin: 0 auto
+				padding: 0.5rem 1rem
+				width: 25%
+				&.is-active
+					background-color: #fff
+					border-color: #fff
+			.btn-article::before
+				content: ''
+				display: inline-block
+				position: absolute
+				left: 0px
+				top: 0
+				bottom: 0
+				margin: auto
+				width: 1px
+				height: 1.25rem
+				background-color: #fff
